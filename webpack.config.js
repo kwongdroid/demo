@@ -12,7 +12,12 @@ const projectName = [
 ];
 
 const config = {
-    entry: getEntry(projectName)
+    entry: getEntry(projectName),
+
+    devtool: 'source-map',
+    devServer: {
+        historyApiFallback: true,//不跳转
+    }
 };
 
 module.exports = config
