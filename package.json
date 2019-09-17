@@ -9,8 +9,13 @@
   "author": "kdroid27",
   "license": "ISC",
   "dependencies": {
+    "@babel/polyfill": "^7.6.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
     "vue-loader": "^15.7.1",
     "vue-style-loader": "^4.1.2",
