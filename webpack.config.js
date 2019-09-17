@@ -1,3 +1,4 @@
+const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 
 function getEntry(projectName) {
@@ -15,6 +16,10 @@ const projectName = [
 
 const config = {
     entry: getEntry(projectName),
+    output: {
+        path: path.resolve(__dirname, './dist'),
+        filename: '[name].js'
+    },
     module: {
         rules: [
             {
@@ -41,6 +46,7 @@ const config = {
         new VueLoaderPlugin()
     ],
 
+    mode: 'production',
     devtool: 'source-map',
     devServer: {
         historyApiFallback: true,//不跳转
