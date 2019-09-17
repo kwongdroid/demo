@@ -15,6 +15,11 @@ const projectName = [
 ];
 
 const config = {
+    mode: 'production',
+    devtool: 'source-map',
+    devServer: {
+        historyApiFallback: true,//不跳转
+    },
     entry: getEntry(projectName),
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -44,13 +49,7 @@ const config = {
     plugins: [
         // 请确保引入这个插件来施展魔法
         new VueLoaderPlugin()
-    ],
-
-    mode: 'production',
-    devtool: 'source-map',
-    devServer: {
-        historyApiFallback: true,//不跳转
-    }
+    ]
 };
 
 module.exports = config
